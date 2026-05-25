@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Auto-Solve reCAPTCHA",
+  "version": "1.0.0",
+  "description": "Bypass reCAPTCHA audio challenges automatically using Wit.ai.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.google.com/recaptcha/*",
+    "*://*.recaptcha.net/*",
+    "https://api.wit.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/recaptcha/api2/bframe*",
+        "*://*.recaptcha.net/recaptcha/api2/bframe*",
+        "*://*.google.com/recaptcha/api2/anchor*",
+        "*://*.recaptcha.net/recaptcha/api2/anchor*"
+      ],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
