@@ -1,6 +1,6 @@
-# reCAPTCHA Auto-Solver
+# DesCaptcha (reCAPTCHA Auto-Solver)
 
-Chrome extension to automatically solve/bypass Google reCAPTCHA's audio challenge using Wit.ai's Speech-to-Text API. It runs seamlessly in the background and is fully compatible with Incognito Mode.
+Browser extension to automatically solve/bypass Google reCAPTCHA's audio challenge using Wit.ai's Speech-to-Text API. It runs seamlessly in the background and is fully compatible with Incognito/Private Mode.
 
 ## Security & Privacy (How It Works)
 
@@ -9,10 +9,16 @@ Yes, it is completely safe. The extension can "click" on elements in your browse
 
 - **Restricted Access:** In the `manifest.json`, the extension is only allowed to run its scripts on very specific URLs: `*://*.google.com/recaptcha/*` and `*://*.recaptcha.net/*`. It **cannot** read, see, or click anything on your banking sites, social media, or any other web pages you visit.
 - **No Tracking:** It only downloads the reCAPTCHA audio file and sends it directly to the Wit.ai API endpoint. It does not send any of your personal data anywhere.
-- **Your Own API Key:** You provide your own Wit.ai API Key. The extension stores this key locally in your browser (`chrome.storage.local`). It is never synced to any external server (except when talking to Wit.ai to transcribe the audio).
+- **Your Own API Key:** You provide your own Wit.ai API Key. The extension stores this key locally in your browser. It is never synced to any external server (except when talking to Wit.ai to transcribe the audio).
 
 ## Installation
 
+### Firefox
+You can install DesCaptcha directly from the official Firefox Add-ons Store. Once installed, it will automatically update whenever there is a new version.
+*(Store Link: Coming soon / Search "DesCaptcha" in Firefox Add-ons)*
+
+### Google Chrome / Brave / Edge (Manual Installation)
+Since the extension uses standard Manifest V3, you can easily load it into Chromium browsers manually:
 1. Open Chrome / Brave / Edge and navigate to `chrome://extensions` (or `brave://extensions`).
 2. Enable **Developer mode** in the top right corner.
 3. Click the **Load unpacked** button in the top left.
