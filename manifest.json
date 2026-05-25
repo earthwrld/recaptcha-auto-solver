@@ -10,7 +10,8 @@
     "https://api.wit.ai/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
   },
   "action": {
     "default_popup": "popup/popup.html"
@@ -26,5 +27,11 @@
       "js": ["content.js"],
       "all_frames": true
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "recaptcha-auto-solver@boemi",
+      "strict_min_version": "109.0"
+    }
+  }
 }
