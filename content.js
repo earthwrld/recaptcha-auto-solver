@@ -93,8 +93,8 @@ async function handleBframe() {
 
 // Determine which frame we are in
 const currentUrl = window.location.href;
-if (currentUrl.includes("/api2/anchor")) {
+if (currentUrl.includes("/api2/anchor") || currentUrl.includes("/enterprise/anchor")) {
   handleAnchorFrame();
-} else if (currentUrl.includes("/api2/bframe")) {
+} else if (currentUrl.includes("/api2/bframe") || currentUrl.includes("/enterprise/bframe")) {
   handleBframe();
 }
